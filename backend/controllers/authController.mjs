@@ -5,6 +5,7 @@ import { generateJwtToken } from "../utils/generateJwtToken.mjs";
 export const signUp = async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    console.log(req.body)
 
     if (!name || !email || !password) {
       return res.status(400).send("All fields are required");

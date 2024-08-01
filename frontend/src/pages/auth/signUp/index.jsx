@@ -5,8 +5,8 @@ import CheckBox from "./checkBox";
 
 const SignUp = () => {
 	const [inputs, setInputs] = useState({
-		fullName: "",
-		username: "",
+		name: "",
+		email: "",
 		password: "",
 		confirmPassword: "",
 		gender: "",
@@ -37,23 +37,23 @@ const SignUp = () => {
 						</label>
 						<input
 							type='text'
-							placeholder='John Doe'
+							placeholder='Name...'
 							className='w-full input input-bordered  h-10'
-							value={inputs.fullName}
-							onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
+							value={inputs.name}
+							onChange={(e) => setInputs({ ...inputs, name: e.target.value })}
 						/>
 					</div>
 
 					<div>
 						<label className='label p-2 '>
-							<span className='text-base label-text'>Username</span>
+							<span className='text-base label-text'>Email</span>
 						</label>
 						<input
-							type='text'
-							placeholder='johndoe'
+							type='email'
+							placeholder='email...'
 							className='w-full input input-bordered h-10'
-							value={inputs.username}
-							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
+							value={inputs.email}
+							onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
 						/>
 					</div>
 
